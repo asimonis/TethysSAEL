@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping>
+  <Name>SWFSC_Mobile.Deployments.MultiChannel.wGPS</Name>
+  <DocumentAttributes>
+    <Attribute>
+      <Name>xmlns:ty</Name>
+      <Value>http://tethys.sdsu.edu/schema/1.0</Value>
+    </Attribute>
+    <Attribute>
+      <Name>xmlns:xsi</Name>
+      <Value>http://www.w3.org/2001/XMLSchema-instance</Value>
+    </Attribute>
+    <Attribute>
+      <Name>xsi:schemaLocation </Name>
+      <Value>http://tethys.sdsu.edu/schema/1.0 tethys.xsd</Value>
+    </Attribute>
+  </DocumentAttributes>
+  <Directives>
+    <!-- 
+      Putting Table before Deployment means we will try to generate multiple deployments,
+      one per line.  I suspect that there may be a non-blank cell in the spreadsheet on
+      some row further down.
+      
+    <Table source="metadata" query="SELECT * from [MetaData$]">
+      <Deployment>
+    
+      In any case, when we have only one deployment, we need the following:
+      <Deployment>
+         <Table source="metadata" query="SELECT * from [MetaData$]">
+      -->
+    <Deployment>
+      <Sheet name="deployDetails">
+        <Entry>
+          <Source> [Project] </Source>
+          <Dest> Project </Dest>
+        </Entry>
+        <Entry>
+          <Source> [DeploymentID] </Source>
+          <Kind>Integer</Kind>
+          <Dest> DeploymentID </Dest>
+        </Entry>
+        <Entry>
+          <Source>[Site]</Source>
+          <Dest>Site</Dest>
+        </Entry>
+        <Entry>
+          <Source> [Cruise] </Source>
+          <Dest> Cruise </Dest>
+        </Entry>
+        <Entry>
+          <!--On what platform is the instrument deployed? (e.g. mooring, tag)-->
+          <Source>[Platform]</Source>
+          <Dest>Platform</Dest>
+        </Entry>
+        <Entry>
+          <Source> [Region] </Source>
+          <Dest> Region </Dest>
+        </Entry>
+        <Instrument>
+          <Entry>
+            <!--This could be array, SoundTrap, DASBR etc. -->
+            <Source> [Type] </Source>
+            <Dest>Type</Dest>
+          </Entry>
+          <Entry>
+            <!-- Instrument ID-->
+            <Source> [Instrument_ID] </Source>
+            <Dest>ID</Dest>
+          </Entry>
+        </Instrument>
+        <SamplingDetails>
+          <Channel>
+            <!-- Each Channel will have it's own sampling details-->
+            <Entry>
+              <Source>[ChannelNumber_1]</Source>
+              <Kind>Integer</Kind>
+              <Dest> ChannelNumber</Dest>
+            </Entry>
+            <Entry>
+              <Source>[SensorNumber_1]</Source>
+              <Kind>Integer</Kind>
+              <Dest> SensorNumber </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Data_Start]</Source>
+              <Kind> DateTime </Kind>
+              <Dest> Start </Dest>
+            </Entry>
+            <Entry>
+              <Source>[Data_End]</Source>
+              <Kind> DateTime </Kind>
+              <Dest> End </Dest>
+            </Entry>
+            <Sampling>
+              <Regimen>
+                <!-- We have a single sampling regimen, just use the
+		     deployment time as the start of the current
+		     regimen -->
+                <Entry>
+                  <Source> [Data_Start]</Source>
+                  <Kind> DateTime </Kind>
+                  <Dest>TimeStamp</Dest>
+                </Entry>
+                <Entry>
+                  <Source> [SampleRate_kHz] </Source>
+                  <Kind> Integer </Kind>
+                  <Dest> SampleRate_kHz </Dest>
+                </Entry>
+                <Entry>
+                  <!-- We don't store the # of quantization bits in our
+		       equipment database -->
+                  <Default> 16 </Default>
+                  <Dest> SampleBits </Dest>
+                </Entry>
+              </Regimen>
+            </Sampling>
+            <DutyCycle>
+              <Regimen>
+                <Entry>
+                  <Source> [Data_Start]</Source>
+                  <Kind> DateTime </Kind>
+                  <Dest>TimeStamp</Dest>
+                </Entry>
+                <Entry>
+                  <Source> [RecordingDuration_m] </Source>
+                  <Kind>Number</Kind>
+                  <Dest>RecordingDuration_m</Dest>
+                </Entry>
+                <Entry>
+                  <Source>[RecordingInterval_m]</Source>
+                  <Kind>Number</Kind>
+                  <Dest>RecordingInterval_m</Dest>
+                </Entry>
+              </Regimen>
+            </DutyCycle>
+          </Channel>
+          <Channel>
+            <!-- Each Channel will have it's own sampling details-->
+            <Entry>
+              <Source>[ChannelNumber_2]</Source>
+              <Kind>Integer</Kind>
+              <Dest> ChannelNumber</Dest>
+            </Entry>
+            <Entry>
+              <Source>[SensorNumber_2]</Source>
+              <Kind>Integer</Kind>
+              <Dest> SensorNumber </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Data_Start]</Source>
+              <Kind> DateTime </Kind>
+              <Dest> Start </Dest>
+            </Entry>
+            <Entry>
+              <Source>[Data_End]</Source>
+              <Kind> DateTime </Kind>
+              <Dest> End </Dest>
+            </Entry>
+            <Sampling>
+              <Regimen>
+                <!-- We have a single sampling regimen, just use the
+		     deployment time as the start of the current
+		     regimen -->
+                <Entry>
+                  <Source> [Data_Start]</Source>
+                  <Kind> DateTime </Kind>
+                  <Dest>TimeStamp</Dest>
+                </Entry>
+                <Entry>
+                  <Source> [SampleRate_kHz] </Source>
+                  <Kind> Integer </Kind>
+                  <Dest> SampleRate_kHz </Dest>
+                </Entry>
+                <Entry>
+                  <!-- We don't store the # of quantization bits in our
+		       equipment database -->
+                  <Default> 16 </Default>
+                  <Dest> SampleBits </Dest>
+                </Entry>
+              </Regimen>
+            </Sampling>
+            <DutyCycle>
+              <Regimen>
+                <Entry>
+                  <Source> [Data_Start]</Source>
+                  <Kind> DateTime </Kind>
+                  <Dest>TimeStamp</Dest>
+                </Entry>
+                <Entry>
+                  <Source> [RecordingDuration_m] </Source>
+                  <Kind>Number</Kind>
+                  <Dest>RecordingDuration_m</Dest>
+                </Entry>
+                <Entry>
+                  <Source>[RecordingInterval_m]</Source>
+                  <Kind>Number</Kind>
+                  <Dest>RecordingInterval_m</Dest>
+                </Entry>
+              </Regimen>
+            </DutyCycle>
+          </Channel>
+        </SamplingDetails>
+        <QualityAssurance>
+          <Description>
+            <Entry>
+              <Default>Record data from Soundtrap</Default>
+              <Dest>Objectives</Dest>
+            </Entry>
+          </Description>
+          <ResponsibleParty>
+            <Entry>
+              <Default>Southwest_Fisheries_Science_Center</Default>
+              <Dest>organizationName</Dest>
+            </Entry>
+          </ResponsibleParty>
+          <Quality>
+            <Entry>
+              <Source>[Data_Start]</Source>
+              <Kind>DateTime</Kind>
+              <Dest>Start</Dest>
+            </Entry>
+            <Entry>
+              <Source>[Data_End]</Source>
+              <Kind>DateTime</Kind>
+              <Dest>End</Dest>
+            </Entry>
+            <Entry>
+              <Source>[Quality_Category]</Source>
+              <Default> unverified </Default>
+              <Dest> Category</Dest>
+            </Entry>
+          </Quality>
+        </QualityAssurance>
+        <Data>
+          <Audio>
+            <Entry>
+              <Source>[Data_ID]</Source>
+              <Dest>URI</Dest>
+            </Entry>
+            <Entry>
+              <Source>[Data_ID]</Source>
+              <Dest>Processed</Dest>
+            </Entry>
+          </Audio>
+          <Track>
+            <Points>
+              <Sheet name="GPS">
+                <Point>
+                  <Entry>
+                    <Source>[UTC]</Source>
+                    <Kind>DateTime</Kind>
+                    <Dest>TimeStamp</Dest>
+                  </Entry>
+                  <Entry>
+                    <Source>[Longitude]</Source>
+                    <Kind>LatLong</Kind>
+                    <Dest>Longitude</Dest>
+                  </Entry>
+                  <Entry>
+                    <Source>[Latitude]</Source>
+                    <Kind> LatLong </Kind>
+                    <Dest>Latitude</Dest>
+                  </Entry>
+                </Point>
+              </Sheet>
+            </Points>
+          </Track>
+        </Data>
+        <DeploymentDetails>
+          <Entry>
+            <Source>[Deployment_Longitude]</Source>
+            <Kind> LatLong</Kind>
+            <Dest>Longitude</Dest>
+          </Entry>
+          <Entry>
+            <Source>[Deployment_Latitude]</Source>
+            <Kind>LatLong</Kind>
+            <Dest>Latitude</Dest>
+          </Entry>
+          <Entry>
+            <Source>[Deployment_Depth_m]</Source>
+            <Dest>DepthInstrument_m</Dest>
+          </Entry>
+          <Entry>
+            <Source> [Deployment_Date] </Source>
+            <Kind> DateTime </Kind>
+            <Dest> TimeStamp </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Data_Start] </Source>
+            <Kind> DateTime </Kind>
+            <Dest> AudioTimeStamp </Dest>
+          </Entry>
+          <Entry>
+            <Source>[Deploy_Vessel] </Source>
+            <Dest>Vessel</Dest>
+          </Entry>
+        </DeploymentDetails>
+        <RecoveryDetails>
+          <Entry>
+            <Source>[Recovery_Longitude]</Source>
+            <Kind> LatLong </Kind>
+            <Dest>Longitude</Dest>
+          </Entry>
+          <Entry>
+            <Source>[Recovery_Latitude]</Source>
+            <Kind> LatLong </Kind>
+            <Dest>Latitude</Dest>
+          </Entry>
+          <Entry>
+            <Source> [Recovery_Date]</Source>
+            <Kind> DateTime </Kind>
+            <Dest>TimeStamp</Dest>
+          </Entry>
+          <Entry>
+            <Source> [Data_End] </Source>
+            <Kind> DateTime </Kind>
+            <Dest> AudioTimeStamp </Dest>
+          </Entry>
+          <Entry>
+            <Source>[Retrieve_Vessel] </Source>
+            <Dest>Vessel</Dest>
+          </Entry>
+        </RecoveryDetails>
+        <Sensors>
+          <Audio>
+            <Entry>
+              <Source>[SensorNumber_1]</Source>
+              <Kind>Integer</Kind>
+              <Dest>Number</Dest>
+            </Entry>
+            <Entry>
+              <Source>[Array_name]</Source>
+              <Dest>SensorID</Dest>
+            </Entry>
+          </Audio>
+          <Audio>
+            <Entry>
+              <Source>[SensorNumber_2]</Source>
+              <Kind>Integer</Kind>
+              <Dest>Number</Dest>
+            </Entry>
+            <Entry>
+              <Source>[Array_name]</Source>
+              <Dest>SensorID</Dest>
+            </Entry>
+          </Audio>
+        </Sensors>
+      </Sheet>
+    </Deployment>
+  </Directives>
+</Mapping>
