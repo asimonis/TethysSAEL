@@ -226,7 +226,6 @@
             </Entry>
             <Entry>
               <Source>[Quality_Category]</Source>
-              <Default> unverified </Default>
               <Dest> Category</Dest>
             </Entry>
           </Quality>
