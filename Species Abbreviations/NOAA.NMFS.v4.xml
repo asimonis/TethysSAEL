@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<te:Abbreviations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:te="http://tethys.sdsu.edu/schema/1.0" xsi:schemaLocation="http://tethys.sdsu.edu/schema/1.0 tethys.xsd">
+  <Name> NOAA.NMFS.v4</Name>
+  <Map>
+    <completename> Balaenoptera borealis </completename>
+    <coding> Bb </coding>
+  </Map>
+  <Map>
+    <completename>Balaenoptera brydei</completename>
+    <coding>Be</coding>
+  </Map>
+  <Map>
+    <completename>Balaenoptera musculus</completename>
+    <coding>Bm</coding>
+  </Map>
+  <Map>
+    <completename>Balaenoptera physalus</completename>
+    <coding>Bp</coding>
+  </Map>
+  <Map>
+    <completename>Eschrichtius robustus</completename>
+    <coding>Er</coding>
+  </Map>
+  <Map>
+    <completename>Megaptera novaeangliae</completename>
+    <coding>Mn</coding>
+  </Map>
+  <Map>
+    <completename>Balaenoptera acutorostrata</completename>
+    <coding>Ba</coding>
+  </Map>
+  <Map>
+    <completename>Eubalaena glacialis</completename>
+    <coding>Eg</coding>
+  </Map>
+  <Map>
+    <completename>Eubalaena japonica</completename>
+    <coding>Ej</coding>
+  </Map>
+  <Map>
+    <completename>Eubalaena australis</completename>
+    <coding>Ea</coding>
+  </Map>
+  <Map>
+    <completename>Balaena mysticetus</completename>
+    <coding>BM</coding>
+  </Map>
+  <Map>
+    <completename>Mysticeti</completename>
+    <coding>UW</coding>
+  </Map>
+  <Map>
+    <completename>Delphinus delphis</completename>
+    <coding>Dd</coding>
+  </Map>
+  <Map>
+    <completename>Delphinus capensis</completename>
+    <coding>Dc</coding>
+  </Map>
+  <Map>
+    <completename>Grampus griseus</completename>
+    <coding>Gg</coding>
+  </Map>
+  <Map>
+    <completename>Globicephala macrorhynchus</completename>
+    <coding>Gm</coding>
+  </Map>
+  <Map>
+    <completename>Lissodelphis borealis</completename>
+    <coding>Lb</coding>
+  </Map>
+  <Map>
+    <completename>Lagenorhynchus obliquidens</completename>
+    <coding>Lo</coding>
+  </Map>
+  <Map>
+    <completename>Orcinus orca</completename>
+    <coding>Oo</coding>
+  </Map>
+  <Map>
+    <completename>Pseudorca crassidens</completename>
+    <coding>Pc</coding>
+  </Map>
+  <Map>
+    <completename>Feresa attenuata</completename>
+    <coding>Fa</coding>
+  </Map>
+  <Map>
+    <completename>Phocoenidae</completename>
+    <coding>UPP</coding>
+  </Map>
+  <Map>
+    <completename>Phocoenoides dalli</completename>
+    <coding>Pd</coding>
+  </Map>
+  <Map>
+    <completename>Physeter macrocephalus</completename>
+    <coding>Pm</coding>
+  </Map>
+  <Map>
+    <completename>Kogia breviceps</completename>
+    <coding>Kb</coding>
+  </Map>
+  <Map>
+    <completename>Kogia sima</completename>
+    <coding>Ks</coding>
+  </Map>
+  <Map>
+    <completename>Kogia</completename>
+    <coding>Kspp</coding>
+  </Map>
+  <Map>
+    <completename>Stenella coeruleoalba</completename>
+    <coding>Sc</coding>
+  </Map>
+  <Map>
+    <completename>Odontoceti</completename>
+    <coding>UO</coding>
+  </Map>
+  <Map>
+    <completename>Berardius bairdii</completename>
+    <coding>Bb1</coding>
+  </Map>
+  <Map>
+    <!-- Cross beaked whale -->
+    <completename Group="BWC">Hyperoodontidae</completename>
+    <coding>BWC</coding>
+  </Map>
+  <Map>
+    <completename>Ziphius cavirostris</completename>
+    <coding>Zc</coding>
+  </Map>
+  <Map>
+    <completename>Mesoplodon densirostris</completename>
+    <coding>Md</coding>
+  </Map>
+  <Map>
+    <completename>Mesoplodon europaeus</completename>
+    <coding>Me</coding>
+  </Map>
+  <Map>
+    <completename>Indopacetus pacificus</completename>
+    <coding>Ip</coding>
+  </Map>
+  <Map>
+    <!-- "Palmyra" beaked whale -->
+    <completename Group="BWP">Hyperoodontidae</completename>
+    <coding>BWP</coding>
+  </Map>
+  <Map>
+    <completename>Mesoplodon stejnegeri</completename>
+    <coding>Ms</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 37V kHz -->
+    <completename Group="BW37V">Hyperoodontidae</completename>
+    <coding>BW37V</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 40 kHz -->
+    <completename Group="BW40">Hyperoodontidae</completename>
+    <coding>BW40</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 43 kHz -->
+    <completename Group="BW43">Hyperoodontidae</completename>
+    <coding>BW43</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 50 kHz -->
+    <completename Group="BW50">Hyperoodontidae</completename>
+    <coding>BW50</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 53 kHz -->
+    <completename Group="BWG">Hyperoodontidae</completename>
+    <coding>BWG</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 53 kHz -->
+    <completename Group="BWG">Hyperoodontidae</completename>
+    <coding>BW53</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 65 kHz -->
+    <completename Group="BW65">Hyperoodontidae</completename>
+    <coding>BW65</coding>
+  </Map>
+  <Map>
+    <!-- beaked whale 70 kHz -->
+    <completename Group="BW70">Hyperoodontidae</completename>
+    <coding>BW70</coding>
+  </Map>
+  <Map>
+    <!--beaked whale -->
+    <completename Group="BW">Hyperoodontidae</completename>
+    <coding>BW</coding>
+  </Map>
+  <Map>
+    <!-- unidentified beaked whale -->
+    <completename Group="UBW">Hyperoodontidae</completename>
+    <coding>UBW</coding>
+  </Map>
+  <Map>
+    <!-- unidentified pinniped, one of the folloiwng families:
+   :  Otariidae, Odobenidae, and Phociade
+   : Note that Caniformia includes all dog-like carnivores
+   : including another marine mammal, the polor bear.
+   -->
+    <completename>Caniformia</completename>
+    <coding>UP</coding>
+  </Map>
+  <Map>
+    <!-- unidentified marine mammal -->
+    <completename>Cetacea</completename>
+    <coding>UMM</coding>
+  </Map>
+  <Map>
+    <!-- anthropogenic sources -->
+    <completename>Homo sapiens</completename>
+    <coding>Anthro</coding>
+  </Map>
+  <Map>
+    <completename>Melanogrammus aeglefinus</completename>
+    <!-- haddock/cod -->
+    <coding>MA</coding>
+  </Map>
+  <Map>
+    <completename>Pogonias cromis</completename>
+    <!-- black drum -->
+    <coding>PC</coding>
+  </Map>
+  <Map>
+    <completename>Opsanus tau</completename>
+    <!-- oyster toadfish -->
+    <coding>OT</coding>
+  </Map>
+  <Map>
+    <!-- is this what we want? cods in general, or Pelagic cods:
+  Melanonidae -->
+    <completename>Gadiformes</completename>
+    <!-- Cods -->
+    <coding>GM</coding>
+  </Map>
+  <Map>
+    <!-- unidentified fish
+   : Fish genetics are a bit messy and there is no one catch-all
+   : category.  Fish bioacousticians are unlikely to be happy with
+   : our collapsing all fish to Actinopterygii.
+   -->
+    <completename>Actinopterygii</completename>
+    <coding>UF</coding>
+  </Map>
+  <Map>
+    <completename Group="Ppl">Actinopterygii</completename>
+    <coding>UF_Ppl</coding>
+  </Map>
+  <Map>
+    <completename>Other phenomena</completename>
+    <coding>Other</coding>
+  </Map>
+</te:Abbreviations>

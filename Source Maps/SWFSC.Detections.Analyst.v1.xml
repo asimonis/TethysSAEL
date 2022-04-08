@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping>
+  <Name>SWFSC.Detections.Analyst.v1</Name>
+  <!-- These are attributes that will appear in the generated document.
+       The ones listed here are mandatory and let XML know how to 
+       validate that the document to be added matches the schema (data layout)
+  -->
+  <DocumentAttributes>
+    <Attribute>
+      <Name>xmlns:ty</Name>
+      <Value>http://tethys.sdsu.edu/schema/1.0</Value>
+    </Attribute>
+    <Attribute>
+      <Name>xmlns:xsi</Name>
+      <Value>http://www.w3.org/2001/XMLSchema-instance</Value>
+    </Attribute>
+    <Attribute>
+      <Name>xsi:schemaLocation </Name>
+      <Value>http://tethys.sdsu.edu/schema/1.0 tethys.xsd</Value>
+    </Attribute>
+  </DocumentAttributes>
+  <!-- Directives contains the information indicating how data is to be transformed... -->
+  <Directives>
+    <Detections>
+      <!-- Name of document that we produce -->
+      <Sheet name="MetaData">
+        <Description>
+          <Entry>
+            <Source> [Objectives] </Source>
+            <Dest> Objectives </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Abstract] </Source>
+            <Dest> Abstract </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Method] </Source>
+            <Dest> Method </Dest>
+          </Entry>
+        </Description>
+        <DataSource>
+          <Entry>
+            <Source> [Project] </Source>
+            <Dest> Project </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Deployment] </Source>
+            <Kind> integer </Kind>
+            <Dest> Deployment </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Site] </Source>
+            <Dest> Site </Dest>
+          </Entry>
+        </DataSource>
+        <Algorithm>
+          <Entry>
+            <Source> [Method] </Source>
+            <Default> Analyst detections </Default>
+            <Dest> Method </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Software] </Source>
+            <Default>Pamguard</Default>
+            <Dest> Software </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Version] </Source>
+            <Default> unknown </Default>
+            <Dest> Version </Dest>
+          </Entry>
+          <Parameters>
+            <Entry>
+              <Source> [Click Viewer plot time m] </Source>
+              <Dest>Click_Viewer_plot_time_m</Dest>
+            </Entry>
+          </Parameters>
+        </Algorithm>
+        <Entry>
+          <Source> [User ID] </Source>
+          <Dest> UserID </Dest>
+        </Entry>
+      </Sheet>
+      <Effort>
+        <Sheet name="MetaData">
+          <Entry>
+            <Source> [Effort Start] </Source>
+            <Kind> DateTime </Kind>
+            <Dest> Start </Dest>
+          </Entry>
+          <Entry>
+            <Source> [Effort End] </Source>
+            <Kind> DateTime </Kind>
+            <Dest> End </Dest>
+          </Entry>
+        </Sheet>
+        <Sheet name="Effort" parameters="define">
+          <Kind>
+            <Entry>
+              <Source> [Species Code] </Source>
+              <Kind> speciescode </Kind>
+              <Dest> SpeciesID </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Call] </Source>
+              <Kind> Calltype </Kind>
+              <Dest> Call </Dest>
+            </Entry>
+            <Entry>
+              <Source> [*Parameters] </Source>
+              <Dest> Parameters </Dest>
+            </Entry>
+            <Entry>
+              <Attribute>
+                <Source> [BinSize_m] </Source>
+                <Dest> BinSize_m </Dest>
+              </Attribute>
+              <Source> [Granularity] </Source>
+              <Dest> Granularity </Dest>
+            </Entry>
+          </Kind>
+        </Sheet>
+      </Effort>
+      <OnEffort>
+        <Sheet name="Detections">
+          <Detection>
+            <Entry>
+              <Source> [Input file] </Source>
+              <Dest> Input_file </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Start time] </Source>
+              <Kind> DateTime </Kind>
+              <Dest> Start </Dest>
+            </Entry>
+            <Entry>
+              <Source> [End time] </Source>
+              <Kind> DateTime </Kind>
+              <Dest> End </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Event Number] </Source>
+              <Dest> Event </Dest>
+            </Entry>
+            <Entry>
+              <Source> [UnitId] </Source>
+              <Dest> UnitID </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Channel] </Source>
+              <Dest> Channel </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Species Code] </Source>
+              <Kind> speciescode </Kind>
+              <Dest> SpeciesID </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Call] </Source>
+              <Dest> Call </Dest>
+              <Kind> Calltype </Kind>
+              <Default> unknown </Default>
+            </Entry>
+            <Entry>
+              <Source> [*Parameters] </Source>
+              <Dest> Parameters </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Image] </Source>
+              <Dest> Image </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Audio] </Source>
+              <Dest> Audio </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Comments] </Source>
+              <Dest> Comment </Dest>
+            </Entry>
+          </Detection>
+        </Sheet>
+      </OnEffort>
+      <OffEffort>
+        <Sheet name="AdhocDetections" optional="true">
+          <Detection>
+            <Entry>
+              <Source> [Input file] </Source>
+              <Dest> Input_file </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Start time] </Source>
+              <Kind> DateTime </Kind>
+              <Dest> Start </Dest>
+            </Entry>
+            <Entry>
+              <Source> [End time] </Source>
+              <Kind> DateTime </Kind>
+              <Dest> End </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Event Number] </Source>
+              <Dest> Event </Dest>
+            </Entry>
+            <Entry>
+              <Source> [UnitId] </Source>
+              <Dest> UnitID </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Channel] </Source>
+              <Dest> Channel </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Species Code] </Source>
+              <Kind> speciescode </Kind>
+              <Dest> SpeciesID </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Call] </Source>
+              <Dest> Call </Dest>
+              <Kind> Calltype </Kind>
+              <Default> unknown </Default>
+            </Entry>
+            <Entry>
+              <Source> [Image] </Source>
+              <Dest> Image </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Audio] </Source>
+              <Dest> Audio </Dest>
+            </Entry>
+            <Entry>
+              <Source> [Comments] </Source>
+              <Dest> Comment </Dest>
+            </Entry>
+          </Detection>
+        </Sheet>
+      </OffEffort>
+    </Detections>
+  </Directives>
+</Mapping>
