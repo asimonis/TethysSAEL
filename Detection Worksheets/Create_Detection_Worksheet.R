@@ -14,7 +14,7 @@ library(openxlsx)
 #Function inputs
 userID<-'asimonis'
 Project<-'CCES'
-DepID<-4
+DepID<-23
 Software<-'Pamguard'
 Version<-'2.00.16'
 PlotWin<-2
@@ -52,7 +52,7 @@ Detections<-EventInfo %>%
 
 AdhocDetections<-Detections[0,]#Don't currently have adhoc detections
 
-MetaData<-data.frame(userID,Project,DepID,Site,Software,Version,PlotWin) 
+MetaData<-data.frame(userID,Project,DepID,Software,Version,PlotWin) 
 MetaData<-cbind(MetaData,Effort)
 MetaData<-MetaData%>%
 rename('User ID'='userID',	'Deployment'='DepID',	

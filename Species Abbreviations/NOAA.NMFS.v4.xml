@@ -144,7 +144,7 @@
   </Map>
   <Map>
     <!-- "Palmyra" beaked whale -->
-    <completename Group="BWP">Hyperoodontidae</completename>
+    <completename>Hyperoodontidae</completename>
     <coding>BWP</coding>
   </Map>
   <Map>
@@ -153,17 +153,17 @@
   </Map>
   <Map>
     <!-- beaked whale 37V kHz -->
-    <completename Group="BW37V">Hyperoodontidae</completename>
+    <completename>Hyperoodontidae</completename>
     <coding>BW37V</coding>
   </Map>
   <Map>
     <!-- beaked whale 40 kHz -->
-    <completename Group="BW40">Hyperoodontidae</completename>
+    <completename>Hyperoodontidae</completename>
     <coding>BW40</coding>
   </Map>
   <Map>
     <!-- beaked whale 43 kHz -->
-    <completename Group="BW43">Hyperoodontidae</completename>
+    <completename>Hyperoodontidae</completename>
     <coding>BW43</coding>
   </Map>
   <Map>
@@ -193,12 +193,12 @@
   </Map>
   <Map>
     <!--beaked whale -->
-    <completename Group="BW">Hyperoodontidae</completename>
+    <completename>Hyperoodontidae</completename>
     <coding>BW</coding>
   </Map>
   <Map>
     <!-- unidentified beaked whale -->
-    <completename Group="UBW">Hyperoodontidae</completename>
+    <completename>Hyperoodontidae</completename>
     <coding>UBW</coding>
   </Map>
   <Map>
