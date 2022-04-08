@@ -1,5 +1,5 @@
 
-addpath('C:\Users\anne.simonis\Tethys')
+addpath(genpath('C:\Users\anne.simonis\Tethys'))
 q= dbInit()
 dbSpeciesFmt(q,'Input', 'Abbrev', 'NOAA.NMFS.v4')
 
