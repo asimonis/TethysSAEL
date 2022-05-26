@@ -5,13 +5,16 @@ dbSpeciesFmt(q,'Input', 'Abbrev', 'NOAA.NMFS.v4')
 
 
 project = 'CCES';
-deployment = 16 ;
+deployment = 8;
 species = 'Zc';
 
 
 detections = dbGetDetections(q,'Project',project,'Deployment',deployment,'SpeciesID',species);
 starttime = min(detections(:,1));
 endtime = max(detections(:,2));
+
+[~, Ind] = sort(detections(:,1));
+detections = detections(:,Ind);
 
 sensor = dbDeploymentInfo(q, 'Project',project,'DeploymentID', deployment);
 

@@ -202,6 +202,11 @@
     <coding>UBW</coding>
   </Map>
   <Map>
+    <!--NBHF odontocete-->
+    <completename>NBHF</completename>
+    <coding>NBHF</coding>
+  </Map>
+  <Map>
     <!-- unidentified pinniped, one of the folloiwng families:
    :  Otariidae, Odobenidae, and Phociade
    : Note that Caniformia includes all dog-like carnivores
