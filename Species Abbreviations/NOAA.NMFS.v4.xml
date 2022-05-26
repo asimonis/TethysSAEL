@@ -114,6 +114,11 @@
     <coding>Sc</coding>
   </Map>
   <Map>
+    <!--narrow-band high frequency-->
+    <completename Group="NBHF">Odontoceti</completename>
+    <coding>NBHF</coding>
+  </Map>
+  <Map>
     <completename>Odontoceti</completename>
     <coding>UO</coding>
   </Map>
@@ -200,11 +205,6 @@
     <!-- unidentified beaked whale -->
     <completename>Hyperoodontidae</completename>
     <coding>UBW</coding>
-  </Map>
-  <Map>
-    <!--NBHF odontocete-->
-    <completename>NBHF</completename>
-    <coding>NBHF</coding>
   </Map>
   <Map>
     <!-- unidentified pinniped, one of the folloiwng families:
