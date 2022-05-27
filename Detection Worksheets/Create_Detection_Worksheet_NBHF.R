@@ -48,7 +48,8 @@ Detections<-EventInfo %>%
   select(Id,species,Call,StartTime,EndTime,nClicks,minNumber,bestNumber,maxNumber,Latitude,Longitude)%>%
   mutate(across(where(is.character),as.numeric))%>%
   rename('Event Number'='Id',	'Species Code'='species',	'Call'='Call',	
-         'Start time'='StartTime','End time'='EndTime',	'Parameter 1'='nClicks')
+         'Start time'='StartTime','End time'='EndTime',	'Count'='nClicks')
+Detections$Count<-as.integer(round(Detections$Count))
 
 AdhocDetections<-Detections[0,]#Don't currently have adhoc detections
 
@@ -60,7 +61,7 @@ MetaData<-MetaData%>%
          'Effort End'='EffortEnd') 
 
 EffortSheet<-rename(EffortSheet,'Common Name'='Common.Name',	
-                    'Species Code'='Species.Code','Parameter 1'='Parameter.1')
+                    'Species Code'='Species.Code','Count'='Count')
 
 #Create worksheet
 wb = createWorkbook()

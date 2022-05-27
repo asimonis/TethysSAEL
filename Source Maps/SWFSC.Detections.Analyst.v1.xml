@@ -139,6 +139,11 @@
               <Dest> End </Dest>
             </Entry>
             <Entry>
+              <Source>[Count]</Source>
+              <Kind>integer</Kind>
+              <Dest>Count</Dest>
+            </Entry>
+            <Entry>
               <Source> [Event Number] </Source>
               <Dest> Event </Dest>
             </Entry>
